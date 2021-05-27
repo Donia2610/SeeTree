@@ -1,7 +1,4 @@
-import flask
 from flask import Flask, render_template
-from flask.helpers import find_package
-from numpy.lib.function_base import percentile
 import requests
 from PIL import Image, ImageOps
 import numpy as np

@@ -1,8 +1,5 @@
-import statistics
-import flask
-from flask import Flask, render_template
+from flask import render_template
 import numpy as np
-from numpy import asarray
 import requests
 
 # function that calculates percentile
