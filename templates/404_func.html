@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% extends "base.html" %}
 
-        <style>
-             h1 {
-                text-align: center;
-                position:relative;
-                }
-
-            .aligncenter {
-                text-align: center;
-                }
-
-            .lead {
-                text-align: center;
-                }   
-        </style>
-    </head>
+{% block main %}
  
  
     <br>
@@ -32,3 +14,5 @@
 
     <p class="lead">You can try:<br>
    min - max - mean - median - pXXX (XXX is a percentile between 0...100)</p>
+
+   {% endblock %}

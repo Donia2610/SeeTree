@@ -4,11 +4,13 @@ from PIL import Image, ImageOps
 import numpy as np
 from numpy import asarray
 import statistics
-from statistics import functions 
+from statistics import functions, dict_images
 
 
 
 app = Flask(__name__)
+
+# dictionary to save images data 
 
 
 @app.route("/")
@@ -23,10 +25,14 @@ def health():
 
 @app.route("/stats/<img_name>/<func>")
 def stats(img_name,func):
+
     img_url = "https://storage.googleapis.com/seetree-demo-open/{}".format(img_name)    #create image url
     if not statistics.is_url_image(img_url):
         return render_template("404_img.html")
-    
+    if img_name in dict_images:
+        if func in dict_images[img_name]:
+            return render_template("stats.html", img_url=img_url, stat=dict_images[img_name][func], result = "We told you, The {} of this image is:".format(func) ) 
+
     img = Image.open(requests.get(img_url, stream=True).raw)                            #save as image
     img_gray = ImageOps.grayscale(img)                                                  #convert to grayscale
     img_numpy = asarray(img_gray)                                                       #convert to numpy array
@@ -36,8 +42,29 @@ def stats(img_name,func):
 
     if not func in functions:
         return render_template("404_func.html")
-  
-    return functions[func](img_numpy,img_url)                     #call the function that the user chooses 
+    print(dict_images)
+    return functions[func](img_numpy,img_url,img_name)                     #call the function that the user chooses 
+
+@app.route("/display")
+def display():
+    return render_template("display.html")
+
+@app.route("/funcs/<img>")
+def funcs(img):
+    return render_template("funcs.html",img=img)
+
+#function to check if image is saved in dictionary 
+def is_in_dict(img,img_url,func):
+    if img in dict_images:
+        if func in dict_images[img]:
+            return render_template("stats.html", img_url=img_url, stat=dict_images[img][func], result = "The {{func}} of this image is:" )    
+    
+
+    
+
+
 
 if __name__=='__main__':
 	app.run(host='0.0.0.0', debug=True)
+
+

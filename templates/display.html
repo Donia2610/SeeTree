@@ -1,0 +1,80 @@
+  
+{% extends "base.html" %}
+
+{% block main %}
+<br>
+<h1 class="display-4">Choose an Image</h1>
+<br><br>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="{{url_for('funcs',img='IMG_1.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_1.jpg" alt="First slide" >
+      </a>
+    </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_2.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_3.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_3.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_4.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_4.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_5.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_5.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_6.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_6.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_7.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_7.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_8.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_8.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_9.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_9.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <a href="{{url_for('funcs',img='IMG_10.jpg')}}">
+        <img src="https://storage.googleapis.com/seetree-demo-open/IMG_10.jpg" alt="Second slide">
+      </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+{% endblock %}

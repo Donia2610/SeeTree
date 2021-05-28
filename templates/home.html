@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+{% extends "base.html" %}
 
-        <style>
-             h1 {
-                text-align: center;
-                position:relative;
-                }
-
-            .aligncenter {
-                text-align: center;
-                }
-            .lead {
-                text-align: center;
-                }
-        </style>
-    </head>
+{% block main %}
  
-    <br>
     <br>
     <h1 class="display-4">Hello!</h1>
     <p class="lead">Here you can find different statistcs on images<br>
@@ -27,9 +10,12 @@
         followed by <b>"/"</b> and the image you wish to learn about <br>
         and another <b>"/"</b>  with the information you would like to find out<br>
         you can choose between: <br>
-        min - max - mean - median - pXXX (XXX is a percentile between 0...100)
+        min - max - mean - median - pXXX (XXX is a percentile between 0...100) 
+        <br>
+        <br>
+        Or just go to images ;)
     </p>
     <p class="aligncenter">
         <img src="/static/hello.jpg" alt="centered image"  />
     </p>
-    
+    {% endblock %}

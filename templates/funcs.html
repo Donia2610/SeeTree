@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+
+    <br><br>
+    <div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose a Function 
+    </a>    
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="{{ url_for('stats',img_name=img ,func='min')}}">Min</a>
+        <a class="dropdown-item" href="{{ url_for('stats',img_name=img,func='max')}}">Max</a>
+        <a class="dropdown-item" href="{{ url_for('stats',img_name=img,func='mean')}}">Mean</a>
+        <a class="dropdown-item" href="{{ url_for('stats',img_name=img,func='median')}}">Median</a>
+
+      </div>
+    </div>
+    <br><br>
+<p class="aligncenter">
+    <img src="https://storage.googleapis.com/seetree-demo-open/{{img}}" alt="centered image"  />
+</p>
+{% endblock %}
+
