@@ -42,7 +42,7 @@ Supported FUNC_NAMES should be:<br>
 i. min <br>
 ii. max <br>
 iii. mean <br>
-iv. median <br 
+iv. median <br>
 v. pXXX where XXX is a percentile between 0...100. For example p10 is the 10th percentile of the image, p99 is the 99th percentile
 
 ## OR
