@@ -23,7 +23,7 @@ flask run
 ```
 Open http://localhost:5000 on your browser
 
-## Run using Dockerfile
+## Run using Docker
 Navigate to 'SeeTree' folder and create Docker image:
 ```sh
 docker build -t app .
