@@ -57,7 +57,7 @@ b. Request to /stats/IMG_1.jpg/average should respond with 404 error code <br>
 c. Request to /stats/IMG_100.jpg/min should respond with 404 error code (assuming such image was not added to the bucket)
 
 ## Bonus ✨
-I created a dictionary that saves results for previous requests. If an identical request is made, the result is pulled from the dictionary instead of doing the same calculations again.
+I created a dictionary that saves results from previous requests. If an identical request is made, the result is pulled from the dictionary instead of doing the same calculations again.
 
 
 
