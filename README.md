@@ -38,7 +38,7 @@ Open http://localhost:5000 on your browser
  The web server will support the following routes:
 - /health : will respond with “OK” to any request
 - /stats/IMAGE_FILE_NAME/FUNC_NAME : will calculate FUNC_NAME on the pixels of given IMAGE_FILE_NAME and return the result. 
-Supported FUNC_NAMES should be:
+Supported FUNC_NAMES should be:<br>
 i. min <br>
 ii. max <br>
 iii. mean <br>
