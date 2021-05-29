@@ -10,7 +10,6 @@ from statistics import functions, dict_images
 
 app = Flask(__name__)
 
-# dictionary to save images data 
 
 
 @app.route("/")

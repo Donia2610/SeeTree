@@ -47,6 +47,8 @@ functions = {
     'median' : find_median
 }
 
+# dictionary to save images data 
+
 dict_images = {}
 
 #function to check if the url is a valid image
