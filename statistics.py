@@ -47,3 +47,8 @@ def is_url_image(image_url):
       return True
    return False
 
+def add_to_dict(img_name,func,res):
+    if not img_name in dict_images:
+        dict_images[img_name]={}
+    dict_images[img_name][func] = res 
+    return   

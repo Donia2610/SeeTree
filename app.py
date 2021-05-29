@@ -41,18 +41,16 @@ def stats(img_name,func):
             if num in dict_images[img_name]:
                 return render_template("stats.html", img_url=img_url, stat=dict_images[img_name][num], result = "We told you, The {}th percentile of this image is:".format(num)) 
         res = statistics.find_percentile(img_numpy,img_url,img_name,num)
-        if not img_name in dict_images:
-            dict_images[img_name]={}
-        dict_images[img_name][num] = res
+        statistics.add_to_dict(img_name,num,res)
+        
         return render_template("stats.html", img_url=img_url, stat=res, result = "The {}th percentile of this image is:".format(num) )
 
     if not func in functions:
         return render_template("404_func.html")
 
     res = functions[func](img_numpy,img_url,img_name)                     #call the function that the user chooses 
-    if not img_name in dict_images:
-        dict_images[img_name]={}
-    dict_images[img_name][func] = res 
+    statistics.add_to_dict(img_name,func,res)                              #add result to dictionary
+
     return render_template("stats.html", img_url=img_url, stat=res, result = "The {} of this image is:".format(func) )
 
 
