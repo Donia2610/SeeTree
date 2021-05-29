@@ -1,4 +1,4 @@
-# Junior SW engineer task
+# Junior SW engineer task 🌲
 ______________________________
 
 Implementation of web server that handles calculation of image statistics. given an image you can calculate:
