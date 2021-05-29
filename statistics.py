@@ -3,41 +3,29 @@ import numpy as np
 import requests
 
 # function that calculates percentile
-def find_percentile(img_numpy,img_url,num):
-    percentile= np.percentile(img_numpy, num)
-    return render_template("stats.html", img_url=img_url, stat=percentile, result = "The {}th percentile of this image is:".format(num) )
+def find_percentile(img_numpy,img_url,img_name,num):
+    return np.percentile(img_numpy, num)
+
 
 # function that calculates min
 def find_min(img_numpy,img_url,img_name):
-    min = np.min(img_numpy)
-    if not img_name in dict_images:
-        dict_images[img_name]={}
-    dict_images[img_name]['min'] = min
-    return render_template("stats.html", img_url=img_url, stat=min, result = "The min of this image is:" )
+    return np.min(img_numpy)
 
+    
 # function that calculates max
 def find_max(img_numpy, img_url,img_name):
-    max = np.max(img_numpy)
-    if not img_name in dict_images:
-        dict_images[img_name]={}
-    dict_images[img_name]['max'] = max
-    return render_template("stats.html", img_url=img_url, stat=max, result = "The max of this image is:" )
+    return np.max(img_numpy)
+
 
 # function that calculates mean
 def find_mean(img_numpy, img_url,img_name):
-    mean = np.mean(img_numpy)
-    if not img_name in dict_images:
-        dict_images[img_name]={}
-    dict_images[img_name]['mean'] = mean
-    return render_template("stats.html", img_url=img_url, stat=mean, result = "The mean of this image is:" )
+    return np.mean(img_numpy)
+
 
 # function that calculates median
 def find_median(img_numpy, img_url,img_name):
-    median = np.median(img_numpy)
-    if not img_name in dict_images:
-        dict_images[img_name]={}
-    dict_images[img_name]['median'] = median
-    return render_template("stats.html", img_url=img_url, stat=median, result = "The median of this image is:" )
+    return np.median(img_numpy)
+
 
 # created dictionary for functions available 
 functions = {
