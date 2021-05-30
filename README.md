@@ -14,23 +14,31 @@ Clone the repo and install dependencies
 git clone https://github.com/Donia2610/SeeTree.git
 ```
 
-## Run using flask
+## Run using flask on windows
 Navigate to 'SeeTree' folder and run the commands below:
 ```sh
-py -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 set FLASK_APP=seetree.py
 flask run
+```
+Open http://localhost:5000 on your browser
+
+## Run using flask on Linux
+```sh
+sudo apt install python3-pip
+python3 -m pip install -r requirements.txt
+FLASK_APP=seetree.py flask run -h 0.0.0.0 -p 5000
 ```
 Open http://localhost:5000 on your browser
 
 ## Run using Docker
 Navigate to 'SeeTree' folder and create Docker image:
 ```sh
-docker build -t seetree .
+sudo docker build -t seetree .
 ```
 Start the container:
 ```sh
-docker run -d -p 5000:5000 seetree
+sudo docker run -d -p 5000:5000 seetree
 ```
 Open http://localhost:5000 on your browser
 
