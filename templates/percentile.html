@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+ 
+    <body>
+        <br><br>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Choose percentile
+            </a>    
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                {% for i in arr %}
+                <a class="dropdown-item" href="{{ url_for('percentile2',img_name=img,num=i)}}">{{i}}</a>
+                {% endfor %}
+            </div>
+            </div>
+        <br><br>
+        <div class="aligncenter">
+
+            <img src="https://storage.googleapis.com/seetree-demo-open/{{img}}" alt="image" >  
+        </div>
+    </body>
+</html>
+
+{% endblock %}  

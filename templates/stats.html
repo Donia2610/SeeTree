@@ -3,14 +3,14 @@
 {% block main %}
  
     <body>
+        <br>
+        <a class="btn btn-outline-secondary" href="{{ url_for('funcs',img=img_name)}}" role="button">  Back  </a>
         <div class="aligncenter">
-            <br><h1 class="display-4">{{result}} {{stat}}</h1><br>
-            <img src={{img_url}} alt="image" >
-            
+            <h1 class="display-4">{{result}} {{stat}}</h1><br>
+            <img src={{img_url}} alt="image" >  
         </div>
-        
     </body>
 </html>
 
 {% endblock %}  
-   
+

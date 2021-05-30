@@ -2,7 +2,10 @@
 
 {% block main %}
 
-
+{% macro input(name, value='', type='text', size=20) -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{
+        value|e }}" size="{{ size }}">
+{%- endmacro %}
 
     <br><br>
     <div class="dropdown">
@@ -14,9 +17,8 @@
         <a class="dropdown-item" href="{{ url_for('stats',img_name=img,func='max')}}">Max</a>
         <a class="dropdown-item" href="{{ url_for('stats',img_name=img,func='mean')}}">Mean</a>
         <a class="dropdown-item" href="{{ url_for('stats',img_name=img,func='median')}}">Median</a>
-
-
-      </div>
+        <a class="dropdown-item" href="{{ url_for('percentile',img_name=img)}}">Percentile</a>
+    </div>
     </div>
     <br><br>
 
