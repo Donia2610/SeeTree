@@ -9,15 +9,15 @@ from statistics import functions, dict_images
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/" , methods = ['GET'])
 def home():
     return render_template("home.html")
 
-@app.route("/health")
+@app.route("/health" , methods = ['GET'])
 def health():
     return render_template("OK.html")
 
-@app.route("/stats/<img_name>/<func>")
+@app.route("/stats/<img_name>/<func>", methods = ['GET'])
 def stats(img_name,func):
 
     img_url = "https://storage.googleapis.com/seetree-demo-open/{}".format(img_name)    #create image url
@@ -53,11 +53,11 @@ def stats(img_name,func):
 def display():
     return render_template("display.html")
 
-@app.route("/stats/<img>")                          # after the chooses an image he can choose the function 
+@app.route("/stats/<img>")                          # after they choose an image they can choose the function 
 def funcs(img):
     return render_template("funcs.html",img=img)
 
-@app.route("/percentile/<img_name>")
+@app.route("/percentile/<img_name>")                    # choose percentile for image
 def percentile(img_name):
     arr=[]
     arr = [i for i in range(100)] 
